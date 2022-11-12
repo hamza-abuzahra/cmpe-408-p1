@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#404258">
 
 <!--Main Title and Exit Button    -->
+
+    <!--Main component that has all the widgets and it is scrollable    -->
     <RelativeLayout
-        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="10dp">
+
         <TextView
             android:id="@+id/txtStudentName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Student"
             android:textSize="25dp"
-            />
+            android:textColor="#6B728E"/>
+
         <Button
             android:id="@+id/buttonExit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
             android:text="exit"
-            android:layout_alignParentRight="true"/>
+            android:backgroundTint="#50577A"
+            android:textColor="#000000" />
     </RelativeLayout>
 
-<!--Main component that has all the widgets and it is scrollable    -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -45,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp">
                 <TextView
+                    android:textColor="#6B728E"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Student ID:"
@@ -52,6 +61,7 @@
                     android:textSize="20dp"/>
 <!--            making sure that the input is 11 digits in Java    -->
                 <EditText
+                    android:textColor="#6B728E"
                     android:id="@+id/inputStdId"
                     android:maxLength="11"
                     android:layout_width="200dp"
@@ -61,6 +71,7 @@
 
 <!--        Name    -->
             <TextView
+                android:textColor="#6B728E"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name"
@@ -73,6 +84,8 @@
                 android:paddingBottom="10dp">
 
                 <EditText
+                    android:textColor="#6B728E"
+                    android:textColorHint="#6B728E"
                     android:id="@+id/inputFirstName"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
@@ -80,6 +93,8 @@
                     android:inputType="text"
                     />
                 <EditText
+                    android:textColor="#6B728E"
+                    android:textColorHint="#6B728E"
                     android:id="@+id/inputLastName"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
@@ -96,6 +111,7 @@
                 android:divider="@color/cardview_shadow_start_color"
                 android:layout_marginBottom="10dp">
                 <TextView
+                    android:textColor="#6B728E"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Date of Birth"
@@ -104,12 +120,12 @@
 
                 <Button
                     android:id="@+id/datePickerButton"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="205dp"
                     android:layout_height="wrap_content"
+                    android:onClick="openDateSelector"
                     android:text="day/month/year"
-                    style="?android:spinnerStyle"
-                    android:textColor="@android:color/black"
-                    android:onClick="openDateSelector"/>
+                    android:textColor="@android:color/black" />
             </LinearLayout>
 
 <!--        Place of birth   -->
@@ -121,31 +137,39 @@
                 android:divider="@color/cardview_shadow_start_color"
                 android:layout_marginBottom="10dp">
                 <TextView
+                    android:textColor="#6B728E"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Place of Birth"
                     android:layout_marginRight="10dp"
                     android:textSize="20dp"/>
+
                 <Spinner
                     android:id="@+id/placeOfBirthSpinner"
+
+                    android:textColor="#000000"
+                    style="?android:spinnerStyle"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
-                    />
+                    android:spinnerMode="dropdown" />
                 
             </LinearLayout>
 
-<!--        Gender -->
+
 
             <TextView
+                android:textColor="#6B728E"
                 android:id="@+id/txtPob"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="Date of Birth"
+                android:text="City of birth"
                 android:textSize="20dp" />
 
+            <!--        Gender -->
             <TextView
+                android:textColor="#6B728E"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gender"
@@ -156,11 +180,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RadioButton
+                    android:textColor="#6B728E"
                     android:id="@+id/maleRadio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Male"/>
                 <RadioButton
+                    android:textColor="#6B728E"
                     android:id="@+id/femaleRadio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -180,6 +206,7 @@
                 android:divider="@color/cardview_shadow_start_color"
                 android:layout_marginBottom="10dp">
                 <TextView
+                    android:textColor="#6B728E"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Faculty"
@@ -201,6 +228,7 @@
                 android:divider="@color/cardview_shadow_start_color"
                 android:layout_marginBottom="10dp">
                 <TextView
+                    android:textColor="#6B728E"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Department"
@@ -221,6 +249,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp">
                 <TextView
+                    android:textColor="#6B728E"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="GPA"
@@ -237,6 +266,7 @@
 
 <!--        Scholarship -->
             <TextView
+                android:textColor="#6B728E"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Scholarship"
@@ -247,14 +277,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RadioButton
+                    android:textColor="#6B728E"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Full"/>
                 <RadioButton
+                    android:textColor="#6B728E"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Half"/>
                 <RadioButton
+                    android:textColor="#6B728E"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="None"/>
@@ -262,6 +295,7 @@
 
 <!--        Additional Information -->
             <CheckBox
+                android:textColor="#6B728E"
                 android:id="@+id/infoCheck"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -282,14 +316,19 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:backgroundTint="#50577A"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Submit"/>
+                    android:text="Submit" />
+
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="reset"
                     android:text="Reset"
-                    android:onClick="reset"/>
+                    android:backgroundTint="#50577A"
+                    android:textColor="#000000"/>
 
             </LinearLayout>
         </LinearLayout>

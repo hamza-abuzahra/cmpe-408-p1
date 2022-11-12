@@ -146,6 +146,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
          // creating a new date picker dialog
         datePickerDialog = new DatePickerDialog(this, AlertDialog.THEME_DEVICE_DEFAULT_DARK, dateSetListener
                 , year,month,day);
+        // limits the max date to the current date
+        datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
 
     }
 
@@ -167,9 +169,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         cityList.put("212", "Istanbul Europe");
         cityList.put("216", "Istanbul Asia");
         cityList.put("312", "Ankara");
+        cityList.put("242", "Antalya");
+        cityList.put("326", "Hatay");
         cityList.put("232", "Izmir");
         cityList.put("252", "Mugla");
         cityList.put("462", "Trabzon");
+        cityList.put("442", "Erzurum");
         cityList.put("224", "Bursa");
     }
 
@@ -217,6 +222,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         dAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, departmentList[i]);
         departmentSpinner.setAdapter(dAdapter);
+        // calling function to match the city code to city name
         matchCodeToCity(i);
 //        departments = departmentList[i];
 //        departmentSpinner.setClickable(true);
