@@ -9,7 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#50577A</color>
     <color name="lightGrey">#474E68</color>
-
+    <color name="cream">#ECDBBA</color>
+    <color name="Darkcream">#D4C5A7</color>
 
 
 </resources>

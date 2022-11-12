@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="New Student"
             android:textSize="25dp"
-            android:textColor="#6B728E"/>
+            android:textColor="#000000"/>
 
         <Button
             android:id="@+id/buttonExit"
@@ -33,7 +33,7 @@
             android:layout_alignParentRight="true"
 
             android:text="exit"
-            android:backgroundTint="#50577A"
+            android:backgroundTint="#474E68"
             android:textColor="#000000" />
     </RelativeLayout>
 
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp">
                 <TextView
-                    android:textColor="#6B728E"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Student ID:"
@@ -61,7 +61,7 @@
                     android:textSize="20dp"/>
 <!--            making sure that the input is 11 digits in Java    -->
                 <EditText
-                    android:textColor="#6B728E"
+                    android:textColor="#000000"
                     android:id="@+id/inputStdId"
                     android:maxLength="11"
                     android:layout_width="200dp"
@@ -71,7 +71,7 @@
 
 <!--        Name    -->
             <TextView
-                android:textColor="#6B728E"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name"
@@ -84,8 +84,8 @@
                 android:paddingBottom="10dp">
 
                 <EditText
-                    android:textColor="#6B728E"
-                    android:textColorHint="#6B728E"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     android:id="@+id/inputFirstName"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
@@ -93,8 +93,8 @@
                     android:inputType="text"
                     />
                 <EditText
-                    android:textColor="#6B728E"
-                    android:textColorHint="#6B728E"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     android:id="@+id/inputLastName"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                 android:divider="@color/cardview_shadow_start_color"
                 android:layout_marginBottom="10dp">
                 <TextView
-                    android:textColor="#6B728E"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Date of Birth"
@@ -120,7 +120,7 @@
 
                 <Button
                     android:id="@+id/datePickerButton"
-                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    style="?android:spinnerStyle"
                     android:layout_width="205dp"
                     android:layout_height="wrap_content"
                     android:onClick="openDateSelector"
@@ -137,7 +137,7 @@
                 android:divider="@color/cardview_shadow_start_color"
                 android:layout_marginBottom="10dp">
                 <TextView
-                    android:textColor="#6B728E"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Place of Birth"
@@ -146,7 +146,6 @@
 
                 <Spinner
                     android:id="@+id/placeOfBirthSpinner"
-
                     android:textColor="#000000"
                     style="?android:spinnerStyle"
                     android:layout_width="200dp"
@@ -158,7 +157,7 @@
 
 
             <TextView
-                android:textColor="#6B728E"
+                android:textColor="#000000"
                 android:id="@+id/txtPob"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -169,7 +168,7 @@
 
             <!--        Gender -->
             <TextView
-                android:textColor="#6B728E"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gender"
@@ -180,13 +179,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RadioButton
-                    android:textColor="#6B728E"
+                    android:textColor="#000000"
                     android:id="@+id/maleRadio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Male"/>
                 <RadioButton
-                    android:textColor="#6B728E"
+                    android:textColor="#000000"
                     android:id="@+id/femaleRadio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -206,7 +205,7 @@
                 android:divider="@color/cardview_shadow_start_color"
                 android:layout_marginBottom="10dp">
                 <TextView
-                    android:textColor="#6B728E"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Faculty"
@@ -228,7 +227,7 @@
                 android:divider="@color/cardview_shadow_start_color"
                 android:layout_marginBottom="10dp">
                 <TextView
-                    android:textColor="#6B728E"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Department"
@@ -249,7 +248,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp">
                 <TextView
-                    android:textColor="#6B728E"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="GPA"
@@ -261,12 +260,13 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:maxLength="4"
+                    android:textColorHint="#000000"
                     android:hint="e.g.: 2.53"/>
             </LinearLayout>
 
 <!--        Scholarship -->
             <TextView
-                android:textColor="#6B728E"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Scholarship"
@@ -277,17 +277,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RadioButton
-                    android:textColor="#6B728E"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Full"/>
                 <RadioButton
-                    android:textColor="#6B728E"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Half"/>
                 <RadioButton
-                    android:textColor="#6B728E"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="None"/>
@@ -295,7 +295,7 @@
 
 <!--        Additional Information -->
             <CheckBox
-                android:textColor="#6B728E"
+                android:textColor="#000000"
                 android:id="@+id/infoCheck"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -316,7 +316,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:backgroundTint="#50577A"
+                    android:backgroundTint="#474E68"
                     android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -327,7 +327,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="reset"
                     android:text="Reset"
-                    android:backgroundTint="#50577A"
+                    android:backgroundTint="#474E68"
                     android:textColor="#000000"/>
 
             </LinearLayout>
