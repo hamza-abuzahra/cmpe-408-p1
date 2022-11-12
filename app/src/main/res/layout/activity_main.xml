@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+<!--Main Title and Exit Button    -->
     <RelativeLayout
         android:padding="10dp"
         android:layout_width="match_parent"
@@ -25,15 +26,17 @@
             android:layout_alignParentRight="true"/>
     </RelativeLayout>
 
+<!--Main component that has all the widgets and it is scrollable    -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <LinearLayout
             android:orientation="vertical"
             android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+<!--        Student id and its input field horizontally aligned    -->
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -45,11 +48,15 @@
                     android:text="Student ID:"
                     android:layout_marginRight="10dp"
                     android:textSize="20dp"/>
+<!--            making sure that the input is 11 digits in Java    -->
                 <EditText
+                    android:id="@+id/stdIdInput"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:inputType="number"/>
             </LinearLayout>
+
+<!--        Name    -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -75,6 +82,8 @@
                     android:inputType="text"/>
 
             </LinearLayout>
+
+<!--        Date of birth    -->
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -94,6 +103,8 @@
                     android:onClick="getDate"
                     />
             </LinearLayout>
+
+<!--        Place of birth   -->
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -112,12 +123,15 @@
                     />
                 
             </LinearLayout>
+
+<!--        Gender -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gender"
                 android:textSize="20dp"/>
             <RadioGroup
+                android:id="@+id/genderRadio"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -131,6 +145,7 @@
                     android:text="Female"/>
             </RadioGroup>
 
+<!--        Faculty -->
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -144,11 +159,14 @@
                     android:layout_marginRight="10dp"
                     android:textSize="20dp"/>
                 <Spinner
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
+                    android:id="@+id/facultySpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     />
 
             </LinearLayout>
+
+<!--        Department -->
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -162,12 +180,14 @@
                     android:layout_marginRight="10dp"
                     android:textSize="20dp"/>
                 <Spinner
+                    android:id="@+id/departmentSpinner"
                     android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:clickable="false"
+                    android:layout_height="wrap_content"
                     />
             </LinearLayout>
 
+<!--        GPA -->
+<!--        setting the max length to 4 one decimal point and 3 digits-->
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -180,17 +200,22 @@
                     android:layout_marginRight="10dp"
                     android:textSize="20dp"/>
                 <EditText
+                    android:id="@+id/gpaInput"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"/>
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:hint="e.g.: 2.53"/>
             </LinearLayout>
 
+<!--        Scholarship -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Scholarship"
                 android:textSize="20dp"/>
             <RadioGroup
+                android:id="@+id/scholarshipRadio"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -207,16 +232,23 @@
                     android:layout_height="wrap_content"
                     android:text="None"/>
             </RadioGroup>
+
+<!--        Additional Information -->
             <CheckBox
+                android:id="@+id/infoCheck"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Additional Information?"/>
+                android:text="Additional Information?"
+                android:onClick="enableInput"/>
 
             <EditText
+                android:id="@+id/infoInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clickable="false"
+                android:enabled="false"
                 />
+
+<!--        Buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -229,7 +261,8 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Reset"/>
+                    android:text="Reset"
+                    android:onClick="reset"/>
 
             </LinearLayout>
         </LinearLayout>
