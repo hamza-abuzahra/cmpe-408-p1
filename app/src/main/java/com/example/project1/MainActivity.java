@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     // place of birth city list picker list:
     public void initializeCityList(){
         cityList.put("212", "Istanbul Europe");
-        cityList.put("216", "Istanbul ASia");
+        cityList.put("216", "Istanbul Asia");
         cityList.put("312", "Ankara");
         cityList.put("232", "Izmir");
         cityList.put("252", "Mugla");
@@ -174,13 +174,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     // returns the country from the code
-    public void matchCodeToCity(){
+    public void matchCodeToCity(int i){
         String citySelected = "";
-        for(int i = 0; i < cityList.size(); i++){
-            if (cityCodesList[i] == facultySpinner.toString()){
-              citySelected = cityList.get(cityCodesList[i]);
-            }
-        }
+        citySelected = cityList.get(cityCodesList[i]);
         System.out.println("in function");
         pob.setText(citySelected);
     }
@@ -221,7 +217,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         dAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, departmentList[i]);
         departmentSpinner.setAdapter(dAdapter);
-        matchCodeToCity();
+        matchCodeToCity(i);
 //        departments = departmentList[i];
 //        departmentSpinner.setClickable(true);
     }
