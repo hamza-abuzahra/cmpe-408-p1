@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#404258">
+    android:background="@color/DarkBackground">
 
 <!--Main Title and Exit Button    -->
-
-    <!--Main component that has all the widgets and it is scrollable    -->
     <RelativeLayout
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp">
-
+        android:background="@color/primaryColor">
         <TextView
             android:id="@+id/txtStudentName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Student"
-            android:textSize="25dp"
-            android:textColor="#000000"/>
-
+            android:text="@string/titleMsg"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:textColor="@color/LightText"
+            />
         <Button
             android:id="@+id/buttonExit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-
-            android:text="exit"
-            android:backgroundTint="#474E68"
-            android:textColor="#000000" />
+            android:text="@string/exitBtn"
+            android:layout_alignParentEnd="true"
+            android:onClick="exit"
+            android:backgroundTint="@color/primaryColor01"
+            android:textColor="@color/LightText"
+            android:padding="10dp"/>
     </RelativeLayout>
 
+<!--Main component that has all the widgets and it is scrollable    -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -53,29 +53,32 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp">
                 <TextView
-                    android:textColor="#000000"
+                    android:textColor="@color/LightText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Student ID:"
-                    android:layout_marginRight="10dp"
-                    android:textSize="20dp"/>
+                    android:text="@string/idMsg"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
 <!--            making sure that the input is 11 digits in Java    -->
                 <EditText
-                    android:textColor="#000000"
-                    android:id="@+id/inputStdId"
+                    android:id="@+id/stdIdInput"
+                    android:textColor="@color/LightText"
+                    android:textColorHint="@color/DarkText"
+                    android:backgroundTint="@color/primaryColor"
                     android:maxLength="11"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:inputType="number"/>
+                    android:inputType="number"
+                    android:hint="@string/idHint"/>
             </LinearLayout>
 
 <!--        Name    -->
             <TextView
-                android:textColor="#000000"
+                android:textColor="@color/LightText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
-                android:textSize="20dp"/>
+                android:text="@string/nameMsg"
+                android:textSize="20sp"/>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -84,22 +87,24 @@
                 android:paddingBottom="10dp">
 
                 <EditText
-                    android:textColor="#000000"
-                    android:textColorHint="#000000"
-                    android:id="@+id/inputFirstName"
+                    android:id="@+id/firstNameInput"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:hint="First Name"
+                    android:hint="@string/firstHint"
                     android:inputType="text"
+                    android:backgroundTint="@color/primaryColor"
+                    android:textColor="@color/LightText"
+                    android:textColorHint="@color/DarkText"
                     />
                 <EditText
-                    android:textColor="#000000"
-                    android:textColorHint="#000000"
-                    android:id="@+id/inputLastName"
+                    android:id="@+id/lastNameInput"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:hint="Last Name"
-                    android:inputType="text"/>
+                    android:hint="@string/lastHint"
+                    android:inputType="text"
+                    android:backgroundTint="@color/primaryColor"
+                    android:textColor="@color/LightText"
+                    android:textColorHint="@color/DarkText"/>
 
             </LinearLayout>
 
@@ -111,110 +116,104 @@
                 android:divider="@color/cardview_shadow_start_color"
                 android:layout_marginBottom="10dp">
                 <TextView
-                    android:textColor="#000000"
+                    android:textColor="@color/LightText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Date of Birth"
-                    android:layout_marginRight="10dp"
-                    android:textSize="20dp"/>
-
+                    android:text="@string/birthDateMsg"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
                 <Button
-                    android:id="@+id/datePickerButton"
-                    style="?android:spinnerStyle"
+                    android:id="@+id/datePickerBtn"
                     android:layout_width="205dp"
                     android:layout_height="wrap_content"
+                    android:text="@string/dateHint"
                     android:onClick="openDateSelector"
-                    android:text="day/month/year"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@color/DarkText"
+                    android:backgroundTint="@color/primaryColor"
+                    />
             </LinearLayout>
 
 <!--        Place of birth   -->
-
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:divider="@color/cardview_shadow_start_color"
                 android:layout_marginBottom="10dp">
                 <TextView
-                    android:textColor="#000000"
+                    android:textColor="@color/LightText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Place of Birth"
-                    android:layout_marginRight="10dp"
-                    android:textSize="20dp"/>
-
+                    android:text="@string/birthPlaceMsg"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    />
                 <Spinner
                     android:id="@+id/placeOfBirthSpinner"
-                    android:textColor="#000000"
-                    style="?android:spinnerStyle"
                     android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:spinnerMode="dropdown" />
-                
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/DarkText"
+                    android:backgroundTint="@color/LightText"
+                    style="?android:buttonStyle"
+                     />
+
             </LinearLayout>
-
-
-
             <TextView
-                android:textColor="#000000"
-                android:id="@+id/txtPob"
+                android:id="@+id/cityMsg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:text="City of birth"
-                android:textSize="20dp" />
+                android:text="@string/cityMsg"
+                android:textSize="20sp"
+                android:textColor="@color/DarkText"/>
 
-            <!--        Gender -->
+<!--        Gender -->
             <TextView
-                android:textColor="#000000"
+                android:textColor="@color/LightText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gender"
-                android:textSize="20dp"/>
+                android:text="@string/genderMsg"
+                android:textSize="20sp"/>
             <RadioGroup
                 android:id="@+id/genderRadio"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RadioButton
-                    android:textColor="#000000"
-                    android:id="@+id/maleRadio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Male"/>
+                    android:text="@string/maleMsg"
+                    android:textColor="@color/LightText" />
                 <RadioButton
-                    android:textColor="#000000"
-                    android:id="@+id/femaleRadio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Female"/>
+                    android:text="@string/femaleMsg"
+                    android:textColor="@color/LightText" />
             </RadioGroup>
-
-
-
-
-
 
 <!--        Faculty -->
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:divider="@color/cardview_shadow_start_color"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center">
                 <TextView
-                    android:textColor="#000000"
+                    android:textColor="@color/LightText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Faculty"
-                    android:layout_marginRight="10dp"
-                    android:textSize="20dp"/>
+                    android:text="@string/facultyMsg"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    />
                 <Spinner
                     android:id="@+id/facultySpinner"
-                    android:layout_width="wrap_content"
+                    android:layout_width="205dp"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/LightText"
+                    style="?android:buttonStyle"
                     />
 
             </LinearLayout>
@@ -227,16 +226,19 @@
                 android:divider="@color/cardview_shadow_start_color"
                 android:layout_marginBottom="10dp">
                 <TextView
-                    android:textColor="#000000"
+                    android:textColor="@color/LightText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Department"
-                    android:layout_marginRight="10dp"
-                    android:textSize="20dp"/>
+                    android:text="@string/departmentMsg"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"/>
                 <Spinner
                     android:id="@+id/departmentSpinner"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/LightText"
+                    style="?android:buttonStyle"
                     />
             </LinearLayout>
 
@@ -248,58 +250,60 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp">
                 <TextView
-                    android:textColor="#000000"
+                    android:textColor="@color/LightText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GPA"
-                    android:layout_marginRight="10dp"
-                    android:textSize="20dp"/>
+                    android:text="@string/gpaMsg"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
                 <EditText
                     android:id="@+id/gpaInput"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:maxLength="4"
-                    android:textColorHint="#000000"
-                    android:hint="e.g.: 2.53"/>
+                    android:hint="@string/gpaMsg"
+                    android:backgroundTint="@color/primaryColor"
+                    android:textColor="@color/LightText"
+                    android:textColorHint="@color/DarkText"/>
             </LinearLayout>
 
 <!--        Scholarship -->
             <TextView
-                android:textColor="#000000"
+                android:textColor="@color/LightText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Scholarship"
-                android:textSize="20dp"/>
+                android:text="@string/scholarshipMsg"
+                android:textSize="20sp"/>
             <RadioGroup
                 android:id="@+id/scholarshipRadio"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RadioButton
-                    android:textColor="#000000"
+                    android:textColor="@color/LightText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Full"/>
+                    android:text="@string/fullRadio" />
                 <RadioButton
-                    android:textColor="#000000"
+                    android:textColor="@color/LightText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Half"/>
+                    android:text="@string/halfRadio"/>
                 <RadioButton
-                    android:textColor="#000000"
+                    android:textColor="@color/LightText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="None"/>
+                    android:text="@string/noneRadio"/>
             </RadioGroup>
 
 <!--        Additional Information -->
             <CheckBox
-                android:textColor="#000000"
+                android:textColor="@color/LightText"
                 android:id="@+id/infoCheck"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Additional Information?"
+                android:text="@string/addInfoMsg"
                 android:onClick="enableInput"/>
 
             <EditText
@@ -307,33 +311,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="false"
+                android:backgroundTint="@color/primaryColor"
+                android:textColor="@color/LightText"
+                android:textColorHint="@color/DarkText"
+                />
+
+            <TextView
+                android:id="@+id/resultTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                android:background="@color/LightText"
                 />
 
 <!--        Buttons -->
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <Button
-                    android:backgroundTint="#474E68"
-                    android:textColor="#000000"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Submit" />
-
+                    android:text="@string/submitBtn"
+                    android:onClick="submit"
+                    android:backgroundTint="@color/primaryColor01"
+                    android:textColor="@color/LightText"
+                    android:layout_marginLeft="40dp"/>
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/resetBtn"
                     android:onClick="reset"
-                    android:text="Reset"
-                    android:backgroundTint="#474E68"
-                    android:textColor="#000000"/>
+                    android:backgroundTint="@color/primaryColor01"
+                    android:textColor="@color/LightText"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="40dp"/>
 
-            </LinearLayout>
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
-
-
-
 </LinearLayout>

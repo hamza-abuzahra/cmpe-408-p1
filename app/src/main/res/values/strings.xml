@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Project 1</string>
+    <string name="titleMsg">New Student</string>
+    <string name="exitBtn">Exit</string>
+    <string name="idMsg">Student ID:</string>
+    <string name="idHint">11 digits</string>
+    <string name="nameMsg">Name</string>
+    <string name="firstHint">First Name</string>
+    <string name="lastHint">Last Name</string>
+    <string name="birthDateMsg">Date of Birth</string>
+    <string name="dateHint">day/month/year</string>
+    <string name="birthPlaceMsg">Place of Birth</string>
+    <string name="cityMsg">City of Birth</string>\
+    <string name="genderMsg">Gender</string>
+    <string name="maleMsg">Male</string>
+    <string name="femaleMsg">Female</string>
+    <string name="facultyMsg">Faculty</string>
+    <string name="departmentMsg">Department</string>
+    <string name="gpaMsg">GPA</string>
+    <string name="gpaHint">e.g.: 2.53</string>
+    <string name="scholarshipMsg">Scholarship</string>
+    <string name="fullRadio">Full</string>
+    <string name="halfRadio">Half</string>
+    <string name="noneRadio">None</string>
+    <string name="addInfoMsg">Additional Information?</string>
+    <string name="submitBtn">Submit</string>
+    <string name="resetBtn">Reset</string>
 </resources>

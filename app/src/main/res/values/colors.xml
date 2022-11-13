@@ -9,8 +9,15 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#50577A</color>
     <color name="lightGrey">#474E68</color>
-    <color name="cream">#ECDBBA</color>
-    <color name="Darkcream">#D4C5A7</color>
+    <color name="cream">@color/primaryColor</color>
+    <color name="Darkcream">@color/primaryColor01</color>
+<!--colors of the design -->
+    <color name="DarkBackground">#222222</color>
+    <color name="LightText">#E4E4E4</color>
+    <color name="primaryColor">#c7493a</color>
+    <color name="primaryColor01">#a33327</color>
+    <color name="DarkText">#AAC5C5C5</color>
+
 
 
 </resources>
