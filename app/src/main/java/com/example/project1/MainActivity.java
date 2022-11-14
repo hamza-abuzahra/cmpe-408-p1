@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         String info = infoInput.getText().toString();
 
         boolean flag = id.length() == 11 && fName.length() != 0 && lName.length() != 0 &&
-                !(Float.parseFloat(gpa) > 4) && genderRadioId != -1 && scholarshipRadioId != -1 &&
+                !(Float.parseFloat(gpa) > 4) && (gpa.length() != 0) && genderRadioId != -1 && scholarshipRadioId != -1 &&
                 (!infoCheck.isChecked() || infoInput.getText().toString().trim().length() != 0) &&
                 facultySpinner.getSelectedItemPosition() != 0 && placeOfBirthSpinner.getSelectedItemPosition() != 0 &&
                 departmentSpinner.getSelectedItemPosition() != 0;
